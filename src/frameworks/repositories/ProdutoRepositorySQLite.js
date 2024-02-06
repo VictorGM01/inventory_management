@@ -1,6 +1,6 @@
-const sqlite3 = require('sqlite3').verbose();
-const IProdutoRepository = require('../../interfaces/repositories/IProdutoRepository');
-const Produto = require('../../entities/Produto');
+import sqlite3 from 'sqlite3';
+import IProdutoRepository from '../../interfaces/repositories/IProdutoRepository.js';
+import Produto from '../../entities/Produto.js';
 
 
 class ProdutoRepositorySQLite extends IProdutoRepository {
