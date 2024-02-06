@@ -1,4 +1,4 @@
-class Produto {
+class Produtos {
   constructor(id, nome, preco, quantidade, estoque_id) {
     this.id = id;
     this.nome = nome;
@@ -8,4 +8,4 @@ class Produto {
   }
 }
 
-export default Produto;
+export default Produtos;
