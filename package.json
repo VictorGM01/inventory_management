@@ -1,0 +1,26 @@
+{
+  "name": "inventory_management",
+  "version": "1.0.0",
+  "description": "Gerenciador de estoque baseado no conceito de Arquitetura Limpa",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorGM01/inventory_management.git"
+  },
+  "keywords": [
+    "inventory",
+    "management",
+    "nodejs",
+    "clean",
+    "architeture"
+  ],
+  "author": "Victor Gabriel Marques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VictorGM01/inventory_management/issues"
+  },
+  "homepage": "https://github.com/VictorGM01/inventory_management#readme"
+}
