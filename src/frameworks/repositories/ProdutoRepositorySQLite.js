@@ -25,6 +25,18 @@ class ProdutoRepositorySQLite extends IProdutoRepository {
       });
     });
   }
+
+  create(produto) {
+    return new Promise((resolve, reject) => {
+      this.db.run('INSERT INTO Produtos (nome, preco, quantidade, estoque_id) VALUES (?, ?, ?, ?)', [produto.nome, Number(produto.preco), Number(produto.quantidade), Number(produto.estoque_id)], function(err) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(this.lastID);
+        }
+      });
+    });
+  }
 }
 
 export default ProdutoRepositorySQLite;
