@@ -1,8 +1,8 @@
-class Estoques {
+class Estoque {
   constructor(id, nome) {
     this.id = id;
     this.nome = nome;
   }
 }
 
-export default Estoques;
+export default Estoque;
