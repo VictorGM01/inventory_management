@@ -6,7 +6,21 @@ import Produto from '../../entities/Produto.js';
 class ProdutoRepositorySQLite extends IProdutoRepository {
   constructor(dbPath) {
     super();
-    this.db = new sqlite3.Database(dbPath);
+    this.db = new sqlite3.Database(dbPath, (err) => {
+      if (err) {
+        console.error('Erro ao abrir o banco de dados:', err.message);
+      } else {
+        console.log('Conexão estabelecida com o banco de dados SQLite');
+        // Ativar a aplicação de restrições de chave estrangeira
+        this.db.run('PRAGMA foreign_keys = ON;', (pragmaErr) => {
+          if (pragmaErr) {
+            console.error('Erro ao ativar restrições de chave estrangeira:', pragmaErr.message);
+          } else {
+            console.log('Restrições de chave estrangeira ativadas com sucesso');
+          }
+        });
+      }
+    });
   }
 
   get(id) {
