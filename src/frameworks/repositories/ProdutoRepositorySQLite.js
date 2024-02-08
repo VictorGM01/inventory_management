@@ -30,7 +30,7 @@ class ProdutoRepositorySQLite extends IProdutoRepository {
           reject(err);
         } else {
           if (row) {
-            const produto = new Produto(row.id, row.nome, row.preco, row.quantidade, roq.estoque_id);
+            const produto = new Produto(row.id, row.nome, row.preco, row.quantidade, row.estoque_id);
             resolve(produto);
           } else {
             resolve(null);

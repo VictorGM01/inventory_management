@@ -5,7 +5,7 @@ import consultaEstoques from '../interfaces/controllers/ConsultaEstoquesControll
 
 
 router
-  .post('/cadastro', cadastroEstoque)
+  .post('/', cadastroEstoque)
   .get('/:id', consultaEstoques);
 
 
